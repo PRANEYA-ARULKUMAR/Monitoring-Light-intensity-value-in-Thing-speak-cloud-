@@ -93,7 +93,7 @@ Prototype and build IoT systems without setting up servers or developing web sof
 ```
 DEVELOPED BY: A PRANEYA
 REFERENCE NO: 24900343
-
+```
 ```
 #include"ThingSpeak.h"
 #include <WiFi.h>
@@ -146,7 +146,6 @@ void loop()
 }
 ```
 # CIRCUIT DIAGRAM:
-
 
 
 # OUTPUT:

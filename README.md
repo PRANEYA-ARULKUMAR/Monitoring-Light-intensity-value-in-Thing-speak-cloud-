@@ -90,7 +90,65 @@ Prototype and build IoT systems without setting up servers or developing web sof
 
  
 # PROGRAM:
+```
+DEVELOPED BY: A PRANEYA
+REFERENCE NO: 24900343
+
+```
+#include"ThingSpeak.h"
+#include <WiFi.h>
+char ssid[]="Redmi Note 13";
+char pass[]="simba@wifi";
+
+const int LDR_PIN=34;
+//#define LDR_PIN 34
+WiFiClient client;
+
+unsigned long myChannelField = 2787763;
+const int ChannelField1 = 1 ; 
+
+const char *myWriteAPIKey="PKCC6R3I913SWAWT";   
+
+void setup()
+{
+  // Initialize serial communication at 115200 baud rate
+  Serial.begin(115200);
+  pinMode (LDR_PIN,OUTPUT);
+  WiFi.mode(WIFI_STA);
+  ThingSpeak.begin(client);
+  
+  Serial.println("LDR Sensor with ESP32 WROOM");
+  delay(1000);
+}
+void loop()
+{
+  if(WiFi.status()!=WL_CONNECTED)
+  {
+    Serial.print("Attempting to connet to SSID: "); 
+    Serial.println(ssid);
+    while(WiFi.status() != WL_CONNECTED)
+    {
+      WiFi.begin(ssid, pass);
+      Serial.print(".");
+      delay(5000);
+    }
+    Serial.println("\nConnected");
+  }
+  // Read the value from the LDR
+  int ldrValue = analogRead(LDR_PIN);
+
+  // Print the LDR value to the Serial Monitor
+  Serial.print("LDR Value: ");
+  Serial.println(ldrValue);
+  ThingSpeak.writeField(myChannelField,ChannelField1,ldrValue, myWriteAPIKey);
+  // Optional: Add a delay for a more stable output
+  delay(1000); // 1-second delay between readings
+}
+```
 # CIRCUIT DIAGRAM:
+
+
+
 # OUTPUT:
 # RESULT:
 

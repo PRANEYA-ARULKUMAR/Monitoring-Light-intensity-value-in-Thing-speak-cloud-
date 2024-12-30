@@ -147,8 +147,15 @@ void loop()
 ```
 # CIRCUIT DIAGRAM:
 
+![Screenshot 2024-12-30 131556](https://github.com/user-attachments/assets/7a1543b6-b1fb-47fd-985c-76fc484316b2)
 
 # OUTPUT:
+
+![Screenshot 2024-12-18 155954](https://github.com/user-attachments/assets/a289df65-d17c-4134-a132-f5183df7e153)
+
+![Screenshot 2024-12-18 160017](https://github.com/user-attachments/assets/17bf2a7d-d322-44b0-a2dd-468e550bf3a5)
+
+
 # RESULT:
 
 Thus the light intensity values are updated in the Thing speak cloud using ESP32 controller.

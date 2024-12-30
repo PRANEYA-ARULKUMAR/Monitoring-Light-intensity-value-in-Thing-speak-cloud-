@@ -98,7 +98,7 @@ REFERENCE NO: 24900343
 #include"ThingSpeak.h"
 #include <WiFi.h>
 char ssid[]="Redmi Note 13";
-char pass[]="simba@wifi";
+char pass[]="XXXX";
 
 const int LDR_PIN=34;
 //#define LDR_PIN 34
